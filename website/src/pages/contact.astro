@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+
+// Placeholder contact details: replace with the school's real phone and email
+// address before the website goes live.
+---
+
+<BaseLayout
+  title="Contact Us | Crown Heights Academy"
+  description="Contact Crown Heights Academy in Benin City, Nigeria. Call +234 800 000 0000 or email info@crownheights.example."
+>
+  <PageHero
+    eyebrow="Contact us"
+    title="We are here to help"
+    intro="Have a question about admissions, school life or your child's progress? Reach the Crown Heights Academy office."
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <article class="contact-card">
+          <p class="eyebrow">Phone</p>
+          <h2>Call the school office</h2>
+          <a class="contact-value" href="tel:+2348000000000">
+            +234 800 000 0000
+          </a>
+          <p>Monday to Friday, 8:00 am – 4:00 pm.</p>
+          <a class="btn btn--primary" href="tel:+2348000000000">Call now</a>
+        </article>
+
+        <article class="contact-card">
+          <p class="eyebrow">Email</p>
+          <h2>Send us a message</h2>
+          <a class="contact-value" href="mailto:info@crownheights.example">
+            info@crownheights.example
+          </a>
+          <p>We will get back to you as soon as we can.</p>
+          <a class="btn btn--primary" href="mailto:info@crownheights.example">
+            Email us
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <p class="eyebrow">Visit</p>
+          <h2>Come to our campus</h2>
+          <span class="contact-value">Benin City, Edo State, Nigeria</span>
+          <p>Please call ahead so we can direct you when you arrive.</p>
+          <a class="btn btn--outline" href="/admissions">See admissions</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="container contact-layout">
+      <div>
+        <p class="eyebrow">Before you visit</p>
+        <h2>A warm welcome awaits</h2>
+        <p class="lead">
+          Our office is open Monday to Friday, 8:00 am – 4:00 pm. If you are
+          coming to ask about admissions, it helps to call ahead so the right
+          person is available to meet you.
+        </p>
+        <p>
+          For admission enquiries, you can bring your child's birth certificate,
+          last school report and passport photograph. You do not need to bring
+          them just to ask a question — a phone call or email is a good place to
+          start.
+        </p>
+        <p>
+          Parents who already have a child at the school should use the contact
+          details above for general questions. Teachers and the school office
+          will always ask for your child's name and class so they can help you
+          quickly.
+        </p>
+      </div>
+
+      <aside class="aside-panel">
+        <h2>Admissions questions?</h2>
+        <p>
+          Applications are open for JSS 1 to SS 3. The application fee is
+          ₦5,000, and the entrance exam holds on Saturday, 16 January 2027.
+        </p>
+        <a class="btn btn--primary" href="/admissions">
+          View admissions info
+        </a>
+      </aside>
+    </div>
+  </section>
+
+</BaseLayout>

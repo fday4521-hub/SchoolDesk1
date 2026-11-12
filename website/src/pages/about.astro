@@ -1,0 +1,163 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import CtaBand from "../components/CtaBand.astro";
+---
+
+<BaseLayout
+  title="About Us | Crown Heights Academy"
+  description="Learn about Crown Heights Academy, a caring private secondary school in Benin City, Nigeria, and our promise to every family."
+>
+  <PageHero
+    eyebrow="About our school"
+    title="A school built on care and high expectations"
+    intro="Crown Heights Academy is a private secondary school in Benin City, Nigeria, serving students from JSS 1 to SS 3."
+  />
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Our story</p>
+        <h2>Learning with purpose, growing with confidence</h2>
+        <p class="lead">
+          Crown Heights Academy exists to give young people in Benin City a
+          strong secondary education in a community that genuinely cares about
+          them.
+        </p>
+        <p>
+          We serve families across Edo State with a complete secondary
+          programme from JSS 1 to SS 3. Our approach is simple: know each
+          student, teach well, and work closely with parents.
+        </p>
+        <p>
+          In our classrooms, students are encouraged to ask questions, practise
+          what they learn and take pride in their work. Outside the classroom,
+          we help them build the habits and values that will serve them long
+          after school.
+        </p>
+      </div>
+
+      <aside class="info-panel" aria-label="School at a glance">
+        <h2>School at a glance</h2>
+        <dl class="info-list">
+          <div>
+            <dt>School type</dt>
+            <dd>Private secondary school</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Benin City, Edo State</dd>
+          </div>
+          <div>
+            <dt>Classes</dt>
+            <dd>JSS 1 – SS 3</dd>
+          </div>
+          <div>
+            <dt>Admissions</dt>
+            <dd>Open for 2027/2028</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">What guides us</p>
+        <h2>Our mission, vision and promise</h2>
+      </div>
+
+      <div class="card-grid card-grid--3">
+        <article class="feature-card">
+          <p class="eyebrow">Our mission</p>
+          <h3>Strong foundations for every student</h3>
+          <p>
+            To give every student a strong academic foundation, a caring
+            community and the confidence to use their gifts.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <p class="eyebrow">Our vision</p>
+          <h3>A school families can trust</h3>
+          <p>
+            To be a school that families in Benin City trust for excellent
+            teaching, good character and a warm community.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <p class="eyebrow">Our promise</p>
+          <h3>Known, supported and challenged</h3>
+          <p>
+            To know your child by name, communicate clearly with you and help
+            them do their very best.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">What we stand for</p>
+        <h2>Values we live out every day</h2>
+        <p class="lead">
+          These values shape how we teach, how we treat one another and how we
+          prepare students for life beyond school.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--4">
+        <article class="value-card">
+          <h3>Respect</h3>
+          <p>We listen, speak kindly and value every person in our community.</p>
+        </article>
+        <article class="value-card">
+          <h3>Curiosity</h3>
+          <p>We ask good questions and enjoy learning new things together.</p>
+        </article>
+        <article class="value-card">
+          <h3>Integrity</h3>
+          <p>We do what is right, even when no one is watching.</p>
+        </article>
+        <article class="value-card">
+          <h3>Excellence</h3>
+          <p>We give our best effort and celebrate steady progress.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Working with parents</p>
+        <h2>A partnership from the first day</h2>
+        <p class="lead">
+          Parents are not visitors at Crown Heights Academy. You are part of the
+          team helping your child succeed.
+        </p>
+        <p>
+          We keep our communication practical and friendly. When there is
+          something to celebrate, we share it. When there is a concern, we
+          address it early and work together on a clear next step.
+        </p>
+      </div>
+
+      <ul class="check-list">
+        <li>Clear updates about your child's progress</li>
+        <li>Easy access to teachers and the school office</li>
+        <li>A safe, orderly and welcoming school environment</li>
+        <li>A warm welcome whenever you visit</li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Come and see our school"
+    text="The best way to understand Crown Heights Academy is to visit. Call or email us to arrange a time to meet the team."
+  />
+</BaseLayout>

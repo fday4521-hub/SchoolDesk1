@@ -1,0 +1,163 @@
+---
+import "../styles/global.css";
+import BrandMark from "../components/BrandMark.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Admissions", href: "/admissions" },
+  { label: "News", href: "/news" },
+  { label: "Contact", href: "/contact" },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/+$/, "") || "/";
+
+function isCurrent(href: string) {
+  if (href === "/") return currentPath === "/";
+  return currentPath === href || currentPath.startsWith(`${href}/`);
+}
+
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0a2140" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Crown Heights Academy" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="en_NG" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark"><BrandMark /></span>
+          <span>
+            <span class="brand-name">Crown Heights</span>
+            <span class="brand-sub">Academy &middot; Benin City</span>
+          </span>
+        </a>
+
+        <input
+          class="nav-check"
+          type="checkbox"
+          id="nav-toggle"
+        />
+        <label class="nav-toggle" for="nav-toggle">
+          <span class="menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>Menu</span>
+        </label>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            {
+              navItems.map((item) => (
+                <li>
+                  <a
+                    class="nav-link"
+                    href={item.href}
+                    aria-current={isCurrent(item.href) ? "page" : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <a class="btn btn--primary nav-apply" href="/admissions">
+            Apply now <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+        </nav>
+
+        <a class="btn btn--primary header-cta" href="/admissions">Apply now</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/">
+              <span class="brand-mark"><BrandMark /></span>
+              <span>
+                <span class="brand-name">Crown Heights Academy</span>
+                <span class="brand-sub">Benin City, Nigeria</span>
+              </span>
+            </a>
+            <p>
+              A private secondary school helping students from JSS 1 to SS 3 grow
+              in knowledge, character and confidence.
+            </p>
+          </div>
+
+          <div>
+            <h2>Explore</h2>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About us</a></li>
+              <li><a href="/admissions">Admissions</a></li>
+              <li><a href="/news">News &amp; notices</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Admissions</h2>
+            <ul class="footer-links">
+              <li><a href="/admissions">How to apply</a></li>
+              <li><a href="/admissions">Classes JSS 1 – SS 3</a></li>
+              <li><a href="/admissions">Documents needed</a></li>
+              <li><a href="/admissions">Entrance exam</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Contact</h2>
+            <address class="footer-contact">
+              <a href="tel:+2348000000000">+234 800 000 0000</a>
+              <a href="mailto:info@crownheights.example">info@crownheights.example</a>
+              <span>Benin City, Edo State, Nigeria</span>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© {year} Crown Heights Academy. All rights reserved.</p>
+          <p>Benin City, Edo State, Nigeria</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

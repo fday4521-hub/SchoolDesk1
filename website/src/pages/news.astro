@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import CtaBand from "../components/CtaBand.astro";
+---
+
+<BaseLayout
+  title="News & Notices | Crown Heights Academy"
+  description="Read the latest news and notices for parents and students at Crown Heights Academy in Benin City, including admissions and entrance exam updates."
+>
+  <PageHero
+    eyebrow="News & notices"
+    title="What's happening at Crown Heights"
+    intro="Notices for parents and students, from admissions dates to everyday reminders."
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Latest updates</p>
+        <h2>School notices</h2>
+        <p class="lead">
+          Important information for current and prospective families. Please
+          check back regularly for new notices.
+        </p>
+      </div>
+
+      <div class="notice-list">
+        <article class="notice-card" id="admissions-open">
+          <div class="news-meta">
+            <span class="tag tag--gold">Admissions</span>
+            <time datetime="2026-11-02">2 November 2026</time>
+          </div>
+          <h2>Admissions open for the 2027/2028 session</h2>
+          <p>
+            Crown Heights Academy is now accepting applications for JSS 1 to
+            SS 3. The application fee is ₦5,000.
+          </p>
+          <p>
+            The entrance exam holds on Saturday, 16 January 2027. Families can
+            collect an application form from the school office or contact us to
+            ask how to get one.
+          </p>
+          <a class="text-link" href="/admissions">
+            View admissions information <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="notice-card" id="entrance-exam">
+          <div class="news-meta">
+            <span class="tag">Entrance exam</span>
+            <time datetime="2026-10-28">28 October 2026</time>
+          </div>
+          <h2>Entrance exam: Saturday, 16 January 2027</h2>
+          <p>
+            The entrance exam for students joining us in the 2027/2028 session
+            will take place on Saturday, 16 January 2027.
+          </p>
+          <p>
+            Applicants should arrive early. The school office will confirm the
+            time and what to bring once your application has been received.
+          </p>
+          <a class="text-link" href="/admissions#entrance-exam">
+            See entrance exam details <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="notice-card" id="contact-details">
+          <div class="news-meta">
+            <span class="tag">Parents</span>
+            <time datetime="2026-10-21">21 October 2026</time>
+          </div>
+          <h2>Keep your contact details up to date</h2>
+          <p>
+            Parents and guardians should confirm their phone number and email
+            address with the school office.
+          </p>
+          <p>
+            Important notices about results, fees and school events are sent
+            directly to families. If your details have changed, please let us
+            know as soon as possible.
+          </p>
+          <a class="text-link" href="/contact">
+            Contact the school office <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

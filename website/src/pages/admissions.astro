@@ -1,0 +1,170 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="Admissions | Crown Heights Academy"
+  description="Admissions for JSS 1 to SS 3 at Crown Heights Academy. Application fee ₦5,000. Entrance exam Saturday, 16 January 2027. See the documents you need."
+>
+  <PageHero
+    eyebrow="Admissions"
+    title="Join the Crown Heights family"
+    intro="Everything you need to apply for JSS 1 to SS 3 at Crown Heights Academy. Admissions are open for the 2027/2028 session."
+  />
+
+  <section class="section section--paper section--tight">
+    <div class="container">
+      <div class="key-facts">
+        <div class="key-fact" id="fees">
+          <span class="key-fact-label">Application fee</span>
+          <strong>₦5,000</strong>
+          <small>Paid at the school office when you submit your application.</small>
+        </div>
+        <div class="key-fact" id="entrance-exam">
+          <span class="key-fact-label">Entrance exam</span>
+          <strong>Saturday, 16 January 2027</strong>
+          <small>The school office will confirm the time after you apply.</small>
+        </div>
+        <div class="key-fact">
+          <span class="key-fact-label">Classes</span>
+          <strong>JSS 1 – SS 3</strong>
+          <small>A complete secondary education for boys and girls.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="classes">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Classes we offer</p>
+        <h2>From first year to final year</h2>
+        <p class="lead">
+          We admit students into all six secondary classes. Each stage builds on
+          the one before, with teaching that matches the needs of the students.
+        </p>
+      </div>
+
+      <div class="class-grid">
+        <article class="class-card">
+          <span>Junior secondary</span>
+          <strong>JSS 1</strong>
+          <p>A confident start to secondary school.</p>
+        </article>
+        <article class="class-card">
+          <span>Junior secondary</span>
+          <strong>JSS 2</strong>
+          <p>Building strong study habits and independence.</p>
+        </article>
+        <article class="class-card">
+          <span>Junior secondary</span>
+          <strong>JSS 3</strong>
+          <p>Preparing for junior secondary examinations.</p>
+        </article>
+        <article class="class-card">
+          <span>Senior secondary</span>
+          <strong>SS 1</strong>
+          <p>Choosing a path in arts, science or commercial studies.</p>
+        </article>
+        <article class="class-card">
+          <span>Senior secondary</span>
+          <strong>SS 2</strong>
+          <p>Deepening knowledge and practical skills.</p>
+        </article>
+        <article class="class-card">
+          <span>Senior secondary</span>
+          <strong>SS 3</strong>
+          <p>Focused preparation for final secondary school examinations.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="how-to-apply">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">How to apply</p>
+        <h2>Three simple steps</h2>
+        <p class="lead">
+          Applying to Crown Heights Academy is straightforward. If you need help
+          at any point, the school office is ready to assist.
+        </p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <h3>Complete an application form</h3>
+          <p>
+            Collect an application form from the school office, or contact us to
+            ask how to get one.
+          </p>
+        </li>
+        <li class="step">
+          <h3>Pay the ₦5,000 application fee</h3>
+          <p>
+            The application fee is paid at the school office when you submit
+            your completed form.
+          </p>
+        </li>
+        <li class="step">
+          <h3>Sit the entrance exam</h3>
+          <p>
+            Join us on Saturday, 16 January 2027. We will confirm the time and
+            arrangements once your application is received.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="documents">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Documents needed</p>
+        <h2>What to bring with your application</h2>
+        <p class="lead">
+          Please prepare these documents before you visit the school office.
+          They help us process your child's application quickly.
+        </p>
+        <ul class="check-list">
+          <li>Birth certificate</li>
+          <li>Last school report</li>
+          <li>Passport photograph</li>
+        </ul>
+      </div>
+
+      <aside class="aside-panel">
+        <h2>Good to know</h2>
+        <p>
+          The entrance exam helps us understand where each applicant is and how
+          best to support them when they join us.
+        </p>
+        <p>
+          Applications are open for the 2027/2028 session. Families are welcome
+          to call or visit before applying.
+        </p>
+        <a class="btn btn--primary" href="/contact">Contact admissions</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Need help?</p>
+        <h2>Talk to our admissions team</h2>
+        <p class="lead">
+          If you have a question about classes, fees, documents or the entrance
+          exam, we are happy to explain the process and help you prepare.
+        </p>
+      </div>
+      <div class="button-row">
+        <a class="btn btn--primary" href="/contact">
+          Contact admissions <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn--outline" href="tel:+2348000000000">Call the school</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  text?: string;
+}
+
+const {
+  eyebrow = "Admissions 2027/2028",
+  title = "Your child's next chapter starts here",
+  text = "Applications are open for JSS 1 to SS 3. The application fee is ₦5,000, and the entrance exam holds on Saturday, 16 January 2027.",
+} = Astro.props;
+---
+
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <div>
+      <p class="eyebrow eyebrow--light">{eyebrow}</p>
+      <h2>{title}</h2>
+      <p>{text}</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn--gold" href="/admissions">
+        Apply now <span class="btn-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="btn btn--outline-light" href="/contact">Talk to us</a>
+    </div>
+  </div>
+</section>
